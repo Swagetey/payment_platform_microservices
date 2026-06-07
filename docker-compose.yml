@@ -1,0 +1,17 @@
+services:
+  postgres:
+    image: postgres:17
+
+    environment:
+      POSTGRES_DB: payments
+      POSTGRES_USER: payments_user
+      POSTGRES_PASSWORD: payments_password
+
+    ports:
+      - "5433:5432"
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

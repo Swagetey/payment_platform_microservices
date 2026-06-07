@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# venv
+.venv/
+venv/
+
+# env config (ВАЖНО)
+.env
+.env.*
+
+# IDE
+.idea/
+*.iml
+
+# logs
+*.log
+
+# build artifacts
+*.egg-info/
+dist/
+build/
