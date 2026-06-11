@@ -18,4 +18,5 @@ dependencies = [
     "pylint",
     "mypy",
     "psycopg2-binary",
+    "pydantic[email]",
 ]

@@ -22,7 +22,6 @@ session_factory = async_sessionmaker(
     expire_on_commit=False,
 )
 
-print(DATABASE_URL)
 async def get_session() -> AsyncSession:
     async with session_factory() as session:
         yield session

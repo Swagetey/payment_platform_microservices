@@ -1,5 +1,7 @@
 from pydantic_settings import BaseSettings
+from pathlib import Path
 
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 class Settings(BaseSettings):
     app_name: str = "Payment Platform"
@@ -11,8 +13,13 @@ class Settings(BaseSettings):
     postgres_user: str
     postgres_password: str
 
+    jwt_secret_key: str
+    jwt_algorithm: str
+    access_token_expire_minutes: int
+    refresh_token_expire_days: int
+
     class Config:
-        env_file = ".env"
+        env_file = BASE_DIR / ".env",
 
 
 settings = Settings()
